@@ -1,0 +1,52 @@
+%% PPTX风格v2 - 分层架构图模板（原型C：全宽横带层叠+层间支撑）
+%% 风格签名: 浅色tint填充 + 黑1.5pt边框 + 黑字；subgraph=层容器；层间粗箭头=支撑
+
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#DAE3F3',
+      'primaryTextColor': '#000000',
+      'primaryBorderColor': '#000000',
+      'lineColor': '#000000',
+      'secondaryColor': '#F6F8FC',
+      'clusterBkg': '#F6F8FC',
+      'clusterBorder': '#000000',
+      'fontFamily': 'Microsoft YaHei',
+      'fontSize': '13px'
+    },
+    'flowchart': { 'htmlLabels': true, 'padding': 14 }
+  }
+}%%
+
+flowchart TB
+  %% ===== 样式（浅底黑边黑字为主；层名标签用深色白字）=====
+  classDef card fill:#DAE3F3,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4
+  classDef cardO fill:#FBE5D6,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4
+  classDef cardG fill:#E2EFDA,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4
+  classDef head fill:#4472C4,color:#FFFFFF,stroke:#000000,stroke-width:1.5px,rx:4,ry:4,font-weight:bold
+
+  %% ===== 层定义（自上而下：应用层→技术层→数据层）=====
+  subgraph L1 ["应用层"]
+    direction LR
+    A1["应用A"]:::card
+    A2["应用B"]:::card
+    A3["应用C"]:::card
+  end
+
+  subgraph L2 ["技术层"]
+    direction LR
+    T1["技术模块1"]:::cardO
+    T2["技术模块2"]:::cardO
+    T3["技术模块3"]:::cardO
+  end
+
+  subgraph L3 ["数据层"]
+    direction LR
+    D1[("数据库1")]:::cardG
+    D2[("数据库2")]:::cardG
+  end
+
+  %% ===== 层间支撑（下层支撑上层，粗线表示块箭头语义）=====
+  L3 ==支撑==> L2
+  L2 ==支撑==> L1

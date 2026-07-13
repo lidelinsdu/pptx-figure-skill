@@ -1,0 +1,61 @@
+{
+  "_comment": "PPTX风格v2：浅色tint填充+黑1.5pt边框+黑字；深饱和色仅用于标题节点(白字)",
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#DAE3F3",
+    "primaryTextColor": "#000000",
+    "primaryBorderColor": "#000000",
+    "lineColor": "#000000",
+    "secondaryColor": "#F6F8FC",
+    "tertiaryColor": "#FFFFFF",
+    "background": "#FFFFFF",
+
+    "mainBkg": "#DAE3F3",
+    "nodeBorder": "#000000",
+    "clusterBkg": "#F6F8FC",
+    "clusterBorder": "#000000",
+    "titleColor": "#000000",
+    "edgeLabelBackground": "#FFFFFF",
+    "nodeTextColor": "#000000",
+
+    "fontFamily": "\"Microsoft YaHei\", \"PingFang SC\", \"Noto Sans CJK SC\", sans-serif",
+    "fontSize": "14px",
+
+    "sectionBkgColor": "#F6F8FC",
+    "altSectionBkgColor": "#FFFFFF",
+    "sectionBkgColor2": "#FFFBE8",
+    "excludeBkgColor": "#E7E6E6",
+    "taskBorderColor": "#000000",
+    "taskBkgColor": "#DAE3F3",
+    "taskTextColor": "#000000",
+    "activeTaskBorderColor": "#000000",
+    "activeTaskBkgColor": "#FBE5D6",
+    "activeTaskTextColor": "#000000",
+    "doneTaskBkgColor": "#E2EFDA",
+    "doneTaskBorderColor": "#000000",
+    "doneTaskTextColor": "#000000",
+    "gridColor": "#D4EBFC",
+    "critBorderColor": "#C00000",
+    "critBkgColor": "#FFC7AA",
+    "todayLineColor": "#C00000"
+  },
+  "_classDefs": {
+    "说明": "flowchart中推荐的classDef（一区一色；Head=深色标题节点）",
+    "blue":   "fill:#DAE3F3,stroke:#000000,stroke-width:1.5px,color:#000000",
+    "orange": "fill:#FBE5D6,stroke:#000000,stroke-width:1.5px,color:#000000",
+    "gold":   "fill:#FFF2CC,stroke:#000000,stroke-width:1.5px,color:#000000",
+    "green":  "fill:#E2EFDA,stroke:#000000,stroke-width:1.5px,color:#000000",
+    "purple": "fill:#EEEDFD,stroke:#000000,stroke-width:1.5px,color:#000000",
+    "blueHead":   "fill:#4472C4,stroke:#000000,stroke-width:1.5px,color:#FFFFFF,font-weight:bold",
+    "orangeHead": "fill:#ED7D31,stroke:#000000,stroke-width:1.5px,color:#FFFFFF,font-weight:bold",
+    "greenHead":  "fill:#70AD47,stroke:#000000,stroke-width:1.5px,color:#FFFFFF,font-weight:bold",
+    "goldHead":   "fill:#FFC000,stroke:#000000,stroke-width:1.5px,color:#000000,font-weight:bold"
+  },
+  "flowchart": {
+    "htmlLabels": true,
+    "curve": "linear",
+    "padding": 16,
+    "nodeSpacing": 40,
+    "rankSpacing": 46
+  }
+}

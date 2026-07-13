@@ -1,0 +1,14 @@
+# 本地私有材料：源参考PPT不发布
+*.pptx
+*.ppt
+
+# Python
+__pycache__/
+*.pyc
+
+# Claude Code 本地会话配置
+.claude/settings.local.json
+
+# 系统文件
+Thumbs.db
+.DS_Store

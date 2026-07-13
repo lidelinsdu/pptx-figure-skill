@@ -1,0 +1,57 @@
+%% PPTX风格v2 - 流程图模板
+%% 风格签名: 浅色tint填充 + 黑1.5pt边框 + 黑字；深饱和色只做标题节点(白粗体)
+%% 用法: 编辑下方节点内容和连接，然后使用Mermaid渲染
+%% 在线预览: https://mermaid.live
+%% CLI渲染: npx @mermaid-js/mermaid-cli -i template.mmd -o output.png
+
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#DAE3F3',
+      'primaryTextColor': '#000000',
+      'primaryBorderColor': '#000000',
+      'lineColor': '#000000',
+      'secondaryColor': '#F6F8FC',
+      'tertiaryColor': '#FFFFFF',
+      'fontFamily': 'Microsoft YaHei',
+      'fontSize': '14px'
+    }
+  }
+}%%
+
+flowchart LR
+  %% ===== 内容卡（浅底黑边黑字，主导样式，一区一色）=====
+  classDef blue fill:#DAE3F3,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4
+  classDef orange fill:#FBE5D6,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4
+  classDef gold fill:#FFF2CC,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4
+  classDef green fill:#E2EFDA,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4
+  classDef purple fill:#EEEDFD,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4
+  %% ===== 标题/阶段节点（深饱和底白粗体，仅用于标题层）=====
+  classDef blueHead fill:#4472C4,color:#FFFFFF,stroke:#000000,stroke-width:1.5px,rx:4,ry:4,font-weight:bold
+  classDef orangeHead fill:#ED7D31,color:#FFFFFF,stroke:#000000,stroke-width:1.5px,rx:4,ry:4,font-weight:bold
+  classDef greenHead fill:#70AD47,color:#FFFFFF,stroke:#000000,stroke-width:1.5px,rx:4,ry:4,font-weight:bold
+  %% 金色上黑字（FFC000惯例配黑字）
+  classDef goldHead fill:#FFC000,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4,font-weight:bold
+
+  %% ===== 节点定义（请编辑此部分）=====
+  S1["阶段一"]
+  S2["阶段二"]
+  S3["阶段三"]
+  A["内容卡A"]
+  B["内容卡B"]
+  C["内容卡C"]
+
+  %% ===== 连接定义（==>粗线做主干流程，-->细线做内容流）=====
+  S1 ==> S2 ==> S3
+  S1 --> A
+  S2 --> B
+  S3 --> C
+
+  %% ===== 样式应用（阶段=Head深色，内容=浅色，一列一色）=====
+  class S1 blueHead
+  class S2 orangeHead
+  class S3 greenHead
+  class A blue
+  class B orange
+  class C green

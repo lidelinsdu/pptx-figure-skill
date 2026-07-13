@@ -1,0 +1,56 @@
+%% PPTX风格v2 - 总-分关系图模板（原型D：总标题+并列分组）
+%% 风格签名: 浅色tint填充 + 黑1.5pt边框 + 黑字；总标题深蓝白字；subgraph=虚线分组语义
+
+%%{
+  init: {
+    'theme': 'base',
+    'themeVariables': {
+      'primaryColor': '#DAE3F3',
+      'primaryTextColor': '#000000',
+      'primaryBorderColor': '#000000',
+      'lineColor': '#000000',
+      'secondaryColor': '#F6F8FC',
+      'clusterBkg': '#F6F8FC',
+      'clusterBorder': '#000000',
+      'fontFamily': 'Microsoft YaHei',
+      'fontSize': '13px'
+    }
+  }
+}%%
+
+flowchart TB
+  %% ===== 样式 =====
+  classDef center fill:#0070C0,color:#FFFFFF,stroke:#000000,stroke-width:1.5px,rx:4,ry:4,font-weight:bold
+  classDef headB fill:#4472C4,color:#FFFFFF,stroke:#000000,stroke-width:1.5px,rx:4,ry:4,font-weight:bold
+  classDef headO fill:#ED7D31,color:#FFFFFF,stroke:#000000,stroke-width:1.5px,rx:4,ry:4,font-weight:bold
+  classDef headG fill:#70AD47,color:#FFFFFF,stroke:#000000,stroke-width:1.5px,rx:4,ry:4,font-weight:bold
+  classDef cardB fill:#DAE3F3,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4
+  classDef cardO fill:#FBE5D6,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4
+  classDef cardG fill:#E2EFDA,color:#000000,stroke:#000000,stroke-width:1.5px,rx:4,ry:4
+
+  %% ===== 总标题 =====
+  CENTER["核心主题/总目标"]:::center
+
+  %% ===== 并列分组（一区一色：标题深色+内容浅色）=====
+  subgraph G1 [" "]
+    H1["方向一"]:::headB
+    B1["内容1-1"]:::cardB
+    B2["内容1-2"]:::cardB
+    H1 --> B1 & B2
+  end
+
+  subgraph G2 [" "]
+    H2["方向二"]:::headO
+    C1["内容2-1"]:::cardO
+    C2["内容2-2"]:::cardO
+    H2 --> C1 & C2
+  end
+
+  subgraph G3 [" "]
+    H3["方向三"]:::headG
+    D1["内容3-1"]:::cardG
+    D2["内容3-2"]:::cardG
+    H3 --> D1 & D2
+  end
+
+  CENTER ==> G1 & G2 & G3

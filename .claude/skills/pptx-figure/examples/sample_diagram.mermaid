@@ -1,0 +1,46 @@
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#DAE3F3", "primaryTextColor": "#000000",
+  "primaryBorderColor": "#000000", "lineColor": "#000000",
+  "fontFamily": "Microsoft YaHei"}}}%%
+
+flowchart LR
+  classDef orange fill:#FBE5D6,stroke:#000000,stroke-width:1.5px,color:#000000,rx:4,ry:4
+  classDef orange_head fill:#ED7D31,stroke:#000000,stroke-width:1.5px,color:#FFFFFF,rx:4,ry:4,font-weight:bold
+  classDef purple fill:#EEEDFD,stroke:#000000,stroke-width:1.5px,color:#000000,rx:4,ry:4
+  classDef purple_head fill:#7030A0,stroke:#000000,stroke-width:1.5px,color:#FFFFFF,rx:4,ry:4,font-weight:bold
+  classDef blue fill:#DAE3F3,stroke:#000000,stroke-width:1.5px,color:#000000,rx:4,ry:4
+  classDef blue_head fill:#4472C4,stroke:#000000,stroke-width:1.5px,color:#FFFFFF,rx:4,ry:4,font-weight:bold
+  classDef green fill:#E2EFDA,stroke:#000000,stroke-width:1.5px,color:#000000,rx:4,ry:4
+  classDef green_head fill:#70AD47,stroke:#000000,stroke-width:1.5px,color:#FFFFFF,rx:4,ry:4,font-weight:bold
+
+  S0["方向一：数据采集与预处理"]:::blue_head
+  S0_0["多源异构数据采集"]:::blue
+  S0 --> S0_0
+  S0_1["数据清洗与标准化"]:::blue
+  S0 --> S0_1
+  S0_2["数据标注与增强"]:::blue
+  S0 --> S0_2
+  S1["方向二：特征提取与表示"]:::orange_head
+  S1_0["多模态特征提取"]:::orange
+  S1 --> S1_0
+  S1_1["特征对齐与融合"]:::orange
+  S1 --> S1_1
+  S1_2["知识图谱构建"]:::orange
+  S1 --> S1_2
+  S2["方向三：模型构建与训练"]:::green_head
+  S2_0["深度学习模型"]:::green
+  S2 --> S2_0
+  S2_1["迁移学习策略"]:::green
+  S2 --> S2_1
+  S2_2["模型压缩优化"]:::green
+  S2 --> S2_2
+  S3["方向四：应用验证与评估"]:::purple_head
+  S3_0["场景部署"]:::purple
+  S3 --> S3_0
+  S3_1["效果评估指标"]:::purple
+  S3 --> S3_1
+  S3_2["迭代优化"]:::purple
+  S3 --> S3_2
+  S0 ==> S1
+  S1 ==> S2
+  S2 ==> S3
