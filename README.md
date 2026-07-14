@@ -1,6 +1,8 @@
 # pptx-figure-skill
 
-一个 [Claude Code](https://claude.com/claude-code) Skill：根据 Markdown 文件生成**学术项目申报书风格**的架构图、技术路线图、总-分关系图。输出 **PowerPoint 可导入的矢量 SVG**（可"转换为形状"变成原生可编辑图形）、PNG 或 Mermaid。
+一个**通用 Agent Skill**（[Claude Code](https://claude.com/claude-code) / [OpenAI Codex](https://github.com/openai/codex) 及任何读取 `AGENTS.md` 的智能体）：根据 Markdown 文件生成**学术项目申报书风格**的架构图、技术路线图、总-分关系图。输出 **PowerPoint 可导入的矢量 SVG**（可"转换为形状"变成原生可编辑图形）、PNG 或 Mermaid。
+
+引擎是一个纯 Python 脚本（SVG 输出零第三方依赖），工具无关；各家智能体只是发现/调用它的入口不同。
 
 风格体系逆向自某 41 页学术项目申报 PPT 图集——通过逐页渲染视觉分析 + OOXML 形状级数据提取，
 归纳出完整的配色系统、组件词汇表、9 种布局原型与反面清单，再用组件库参数化复现。
@@ -29,12 +31,28 @@
 
 ## 安装
 
-把 `.claude/skills/pptx-figure/` 复制到你项目的 `.claude/skills/` 目录：
-
 ```bash
 git clone https://github.com/lidelinsdu/pptx-figure-skill.git
+```
+
+**Claude Code**：把技能目录复制到项目的 `.claude/skills/`（或用户级 `~/.claude/skills/`），
+Claude 通过 `skill.md` 原生发现，直接 `/pptx-figure` 或自然语言触发。
+
+```bash
 cp -r pptx-figure-skill/.claude/skills/pptx-figure  你的项目/.claude/skills/
 ```
+
+**Codex（及任何 `AGENTS.md` 智能体）**：同一个技能目录里带了 `AGENTS.md`（Codex 原生读取）。
+把技能目录放进项目，并在项目根 `AGENTS.md` 里指一下它即可；可选装斜杠命令：
+
+```bash
+cp -r pptx-figure-skill/.claude/skills/pptx-figure  你的项目/skills/            # 位置随意
+# 让 Codex 发现：把 pptx-figure-skill/AGENTS.md 的内容并入你项目根的 AGENTS.md
+# 可选：安装 /pptx-figure 斜杠命令
+cp pptx-figure-skill/.claude/skills/pptx-figure/prompts/pptx-figure.md  ~/.codex/prompts/
+```
+
+**任何工具 / 直接命令行**：引擎与工具无关，可脱离智能体直接跑（见下方"使用"）。
 
 依赖：**SVG 输出无需任何第三方库**（纯标准库）。PNG 输出需 `pip install matplotlib`，
 且中文渲染需中文字体：Windows 自带微软雅黑；Linux/WSL 可安装 `fonts-noto-cjk`/`fonts-wqy-zenhei`，
@@ -98,8 +116,11 @@ S.save(fig, 'out.svg')   # 扩展名决定格式：.svg矢量 / .png栅格
 ## 目录结构
 
 ```
+AGENTS.md                                   # 仓库根：Codex/通用智能体入口（指向技能）
 .claude/skills/pptx-figure/
-├── skill.md                                # Claude入口：风格签名+调用方式
+├── skill.md                                # Claude Code 原生入口（frontmatter）
+├── AGENTS.md                               # Codex/通用入口（与skill.md同目录，文件夹双原生）
+├── prompts/pptx-figure.md                  # Codex 斜杠命令（装到 ~/.codex/prompts/）
 ├── generate-figure.py                      # 生成脚本（4种版式原型+Mermaid）
 ├── style-reference/complete-style-guide.md # 完整风格指南（配色/组件/9原型/反面清单）
 ├── templates/python/pptx_style_base.py     # 双后端组件库（SVG矢量 + matplotlib栅格）
