@@ -31,7 +31,10 @@ git clone https://github.com/lidelinsdu/pptx-figure-skill.git
 cp -r pptx-figure-skill/.claude/skills/pptx-figure  你的项目/.claude/skills/
 ```
 
-依赖：`pip install matplotlib`（中文渲染需要系统安装微软雅黑或 SimHei 字体）。
+依赖：`pip install matplotlib`。中文渲染需要中文字体：Windows 自带微软雅黑；
+Linux/WSL 可安装 `fonts-noto-cjk`/`fonts-wqy-zenhei`，或把 Windows 的
+`C:\Windows\Fonts\msyh.ttc` 拷入 `~/.local/share/fonts/` 后执行 `fc-cache -f`
+并删除 `~/.cache/matplotlib`。
 
 ## 使用
 

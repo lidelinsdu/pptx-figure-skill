@@ -87,7 +87,8 @@ def fit_text(text, box_w, box_h, fontsize, min_size=7, pad_x=10, pad_y=5):
 def init_figure(figsize=(13.33, 7.5), dpi=150):
     """全出血16:9画布，1280×720坐标，白底"""
     plt.rcParams.update({
-        'font.family': ['Microsoft YaHei', 'SimHei', 'sans-serif'],
+        'font.family': ['Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC',
+                        'WenQuanYi Zen Hei', 'sans-serif'],
         'font.size': 12,
         'axes.unicode_minus': False,
     })
