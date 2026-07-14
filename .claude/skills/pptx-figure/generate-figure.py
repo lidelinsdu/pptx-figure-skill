@@ -13,10 +13,17 @@ PPTX Figure Style Generator v2
 
 用法:
     python generate-figure.py input.md -o figure.png --type route
+    python generate-figure.py input.md -o figure.svg            (PPTX可导入的矢量图)
     python generate-figure.py input.md -o figure.png            (自动选型)
     python generate-figure.py input.md -o diagram.mermaid       (Mermaid代码)
 
-依赖: pip install matplotlib
+输出格式由 -o 扩展名决定：
+    .svg  → 手写矢量图；PowerPoint 可“插入>图片”导入，并“图形工具>转换为形状”
+            变成原生可编辑图形（圆角矩形/椭圆/文本框/连接线）。矢量无损缩放。
+    .png  → matplotlib 栅格图（需要 matplotlib）
+    .mermaid → Mermaid 源码
+
+依赖: SVG输出无需第三方库；PNG输出需要 pip install matplotlib
 """
 
 import os
@@ -409,6 +416,10 @@ def main():
     if args.type == 'mermaid' or out.lower().endswith('.mermaid'):
         gen_mermaid(md, out)
         return
+
+    # 按输出扩展名选择渲染后端：.svg=矢量, 其余=matplotlib栅格
+    import pptx_style_base as S
+    S.set_backend('svg' if out.lower().endswith('.svg') else 'mpl')
 
     t = auto_type(md) if args.type == 'auto' else args.type
     GENERATORS[t](md, out)

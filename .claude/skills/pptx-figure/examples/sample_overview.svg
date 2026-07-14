@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="13.333in" height="7.5in" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF"/>
+<rect x="45" y="20" width="12" height="26" fill="#0070C0"/>
+<rect x="60" y="20" width="7" height="26" fill="#4472C4"/>
+<text x="79" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="29.33" fill="#000000" text-anchor="start" font-weight="bold"><tspan x="79" y="42.97">研究内容关系图示例</tspan></text>
+<rect x="90" y="198" width="1100" height="344" rx="8" ry="8" fill="#FFFFFF" stroke="#000000" stroke-width="2"/>
+<rect x="337.5" y="172" width="605" height="52" rx="5" ry="5" fill="#0070C0"/>
+<text x="640" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="640" y="206.16">基于多模态数据融合的智能分析系统</tspan></text>
+<rect x="120" y="286" width="322.67" height="216" rx="6" ry="6" fill="#F6F8FC" stroke="#000000" stroke-width="2" stroke-dasharray="6.4 4"/>
+<rect x="165.17" y="268" width="232.32" height="36" rx="5" ry="5" fill="#4472C4"/>
+<text x="281.33" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="17.33" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="281.33" y="291.89">方向一：数据采集与预处理</tspan></text>
+<rect x="136" y="338" width="290.67" height="40" rx="5" ry="5" fill="#DAE3F3" stroke="#000000" stroke-width="2"/>
+<text x="281.33" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="281.33" y="363.44">多源异构数据采集</tspan></text>
+<rect x="136" y="390" width="290.67" height="40" rx="5" ry="5" fill="#DAE3F3" stroke="#000000" stroke-width="2"/>
+<text x="281.33" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="281.33" y="415.44">数据清洗与标准化</tspan></text>
+<rect x="136" y="442" width="290.67" height="40" rx="5" ry="5" fill="#DAE3F3" stroke="#000000" stroke-width="2"/>
+<text x="281.33" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="281.33" y="467.44">数据标注与增强</tspan></text>
+<polygon points="456.51,407 464.83,407 464.83,398.16 473.67,398.16 473.67,389.84 464.83,389.84 464.83,381 456.51,381 456.51,389.84 447.67,389.84 447.67,398.16 456.51,398.16" fill="#4472C4"/>
+<rect x="478.67" y="286" width="322.67" height="216" rx="6" ry="6" fill="#FFFDFB" stroke="#000000" stroke-width="2" stroke-dasharray="6.4 4"/>
+<rect x="523.84" y="268" width="232.32" height="36" rx="5" ry="5" fill="#ED7D31"/>
+<text x="640" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="18.67" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="640" y="292.35">方向二：特征提取与表示</tspan></text>
+<rect x="494.67" y="338" width="290.67" height="40" rx="5" ry="5" fill="#FBE5D6" stroke="#000000" stroke-width="2"/>
+<text x="640" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="640" y="363.44">多模态特征提取</tspan></text>
+<rect x="494.67" y="390" width="290.67" height="40" rx="5" ry="5" fill="#FBE5D6" stroke="#000000" stroke-width="2"/>
+<text x="640" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="640" y="415.44">特征对齐与融合</tspan></text>
+<rect x="494.67" y="442" width="290.67" height="40" rx="5" ry="5" fill="#FBE5D6" stroke="#000000" stroke-width="2"/>
+<text x="640" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="640" y="467.44">知识图谱构建</tspan></text>
+<polygon points="815.17,407 823.49,407 823.49,398.16 832.33,398.16 832.33,389.84 823.49,389.84 823.49,381 815.17,381 815.17,389.84 806.33,389.84 806.33,398.16 815.17,398.16" fill="#ED7D31"/>
+<rect x="837.33" y="286" width="322.67" height="216" rx="6" ry="6" fill="#F8FCF6" stroke="#000000" stroke-width="2" stroke-dasharray="6.4 4"/>
+<rect x="882.51" y="268" width="232.32" height="36" rx="5" ry="5" fill="#70AD47"/>
+<text x="998.67" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="18.67" fill="#FFFFFF" text-anchor="middle" font-weight="bold"><tspan x="998.67" y="292.35">方向三：模型构建与训练</tspan></text>
+<rect x="853.33" y="338" width="290.67" height="40" rx="5" ry="5" fill="#E2EFDA" stroke="#000000" stroke-width="2"/>
+<text x="998.67" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="998.67" y="363.44">深度学习模型</tspan></text>
+<rect x="853.33" y="390" width="290.67" height="40" rx="5" ry="5" fill="#E2EFDA" stroke="#000000" stroke-width="2"/>
+<text x="998.67" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="998.67" y="415.44">迁移学习策略</tspan></text>
+<rect x="853.33" y="442" width="290.67" height="40" rx="5" ry="5" fill="#E2EFDA" stroke="#000000" stroke-width="2"/>
+<text x="998.67" font-family="Microsoft YaHei, SimHei, Noto Sans CJK SC, WenQuanYi Zen Hei, sans-serif" font-size="16" fill="#000000" text-anchor="middle"><tspan x="998.67" y="467.44">模型压缩优化</tspan></text>
+</svg>

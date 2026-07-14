@@ -25,25 +25,30 @@
 │       └── pptx_style_base.py                  # 组件库（卡片/骑缝标签/燕尾页签/块箭头…）
 └── examples/
     ├── research-content.md                     # 示例输入
-    ├── sample_route.png                        # 原型A: 燕尾页签+泳道
-    ├── sample_panel.png                        # 原型B: 多栏技术板
-    ├── sample_architecture.png                 # 原型C: 分层架构
-    ├── sample_overview.png                     # 原型D: 总-分关系
+    ├── sample_route.{svg,png}                   # 原型A: 燕尾页签+泳道
+    ├── sample_panel.{svg,png}                   # 原型B: 多栏技术板
+    ├── sample_architecture.{svg,png}           # 原型C: 分层架构
+    ├── sample_overview.{svg,png}               # 原型D: 总-分关系
     └── sample_diagram.mermaid                  # Mermaid输出示例
 ```
 
 ## 使用方法
 
 ```bash
-# 自动选型
+# 生成 PPTX 可导入的矢量 SVG（推荐；无需 matplotlib）
+python .claude/skills/pptx-figure/generate-figure.py examples/research-content.md -o out.svg
+
+# 自动选型生成 PNG（需 matplotlib）
 python .claude/skills/pptx-figure/generate-figure.py examples/research-content.md -o out.png
 
 # 指定版式: route / panel / architecture / overview
-python .claude/skills/pptx-figure/generate-figure.py examples/research-content.md -o out.png --type route
+python .claude/skills/pptx-figure/generate-figure.py examples/research-content.md -o out.svg --type route
 
 # Mermaid代码
 python .claude/skills/pptx-figure/generate-figure.py examples/research-content.md -o out.mermaid
 ```
+
+输出格式由 `-o` 扩展名决定：`.svg`（矢量，PowerPoint 可导入并"转换为形状"）、`.png`（栅格）、`.mermaid`（源码）。
 
 ## 风格体系（速览）
 
